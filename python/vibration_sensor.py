@@ -42,11 +42,11 @@ def main_loop():
         low, high = poll_gpio(10, 100, vib_pin)
         status = '<h2 class="'
         if high > 1:
-            status += 'on">Dryer Status: On\n\n'
+            status += 'on">Dryer Status: ON\n\n'
         else:
-            status += 'off">Dryer Status: Off\n\n'
+            status += 'off">Dryer Status: OFF\n\n'
         with open(status_file, 'w') as f:
-            status += 'Updated: ' + datetime.now().strftime("%Y-%m-%d %H:%M:%S") + '</h2>'
+            status += 'Updated: ' + datetime.now().strftime("%d-%m-%Y -  %H:%M:%S") + '</h2>'
             f.write(status)
 
 
