@@ -1,4 +1,6 @@
-#Before running this script, it assumes you cloned this repository to the Pi's default home directory - /home/pi - if you have cloned this repository elsewhere then the index.php file needs amending to point to the correct dryer_status.txt location
+#Before running this script, it assumes you cloned this repository to the Pi's default home directory - /home/pi
+#If you have cloned this repository elsewhere then the index.php file needs amending to point to the correct dryer_status.txt location
+#The rc.local file will also need updating to point to the correct vibration_sensor.py script
 
 #Full Update
 sudo apt update && sudo apt upgrade -y
