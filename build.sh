@@ -6,7 +6,7 @@
 sudo apt update && sudo apt upgrade -y
 
 #Install Nginx and PHP
-sudo apt install nginx php-fpm
+sudo apt install nginx php-fpm -y
 
 #Copy altered Nginx default config that enables using PHP processor
 sudo cp php/nginxdefault /etc/nginx/sites-available/default
