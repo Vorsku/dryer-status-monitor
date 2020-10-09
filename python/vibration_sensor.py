@@ -40,13 +40,13 @@ def main_loop():
     status_file = os.path.join(os.path.dirname(__file__), 'dryer_status.txt')
     while True:
         low, high = poll_gpio(10, 100, vib_pin)
-        status = 'Dryer Status: '
+        status = '<h2 class="'
         if high > 1:
-            status += 'On\n'
+            status += 'on">Dryer Status: On\n\n'
         else:
-            status += 'Off\n'
+            status += 'off">Dryer Status: Off\n\n'
         with open(status_file, 'w') as f:
-            status += 'Updated: ' + str(datetime.now())
+            status += 'Updated: ' + datetime.now().strftime("%Y-%m-%d %H:%M:%S") + '</h2>'
             f.write(status)
 
 
